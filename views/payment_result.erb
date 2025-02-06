@@ -1,5 +1,14 @@
 <h1>Payment Results</h1>
 <p>APR</p>
-<%= @APR.to_f.to_fs(:percentage, {:precision => 4}) %>
+<%= @apr_print.to_f.to_fs(:percentage, {:precision => 4}) %>
 <br>
-<a href="/square_root/new"> Calculate another square root </a>
+<p>Number of years</p>
+<%= @years_print%>
+<br>
+<p>Principal</p>
+<%= @principal_print.to_fs(:currency, { :precision => 2 })%>
+<br>
+<p>Payment<p>
+<%= @monthly_payment.to_fs(:currency, { :precision => 2 })%>
+<br>
+<a href="/payment/new"> Calculate another payment </a>
